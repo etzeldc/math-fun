@@ -1,0 +1,33 @@
+.whole {
+    background-color: greenyellow;
+    padding-top: 20px;
+}
+
+.well {
+    background-color: purple;
+    color: yellow;
+    padding-top: 0px;
+}
+
+input {
+    background-color: yellow;
+    border-color: yellowgreen;
+    color: purple;
+}
+
+button {
+    background-color: yellow;
+    border-color: greenyellow;
+    color: purple;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: purple;
+    color: yellow;
+}
+
+output {
+    min-height: 200px;
+    background-color: white;
+}
