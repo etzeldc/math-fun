@@ -104,12 +104,11 @@ function ac() {
     $('#calcOutput').empty();
 }
 
-// Number first, or just splice the string?
-// function invert() {
-//     screen = screen + "9";
-//     $('#calcOutput').empty();
-//     $('#calcOutput').append(screen);
-// }
+function invert() {
+    screen = screen * -1;
+    $('#calcOutput').empty();
+    $('#calcOutput').append(screen);
+}
 
 // Splice a period two before the end (toggle on/off)
 // function percent() {
@@ -219,10 +218,20 @@ function decimal() {
     $('#calcOutput').append(screen);
 }
 
-// Operations are covered in the if conditions
-// function equals() {
-//     result = memory + operation + screen;
-// }
+function equals() {
+    if (operation === "/") {
+        result = Number(memory) / Number(screen);
+    } else if (operation === "*") {
+        result = Number(memory) * Number(screen);
+    } else if (operation === "-") {
+        result = Number(memory) - Number(screen);
+    } else if (operation === "+") {
+        result = Number(memory) + Number(screen);
+    }
+    $('#calcOutput').empty();
+    $('#calcOutput').append(result);
+    screen = result;
+}
 
 // // tests
 // console.log(screen);
