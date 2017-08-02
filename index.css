@@ -20,6 +20,7 @@ button {
     border-color: greenyellow;
     color: purple;
     font-weight: bold;
+    min-width: 36px;
 }
 
 button:hover {
@@ -30,4 +31,15 @@ button:hover {
 output {
     min-height: 200px;
     background-color: white;
+}
+
+.calc {
+    background-color: yellow;
+    border-color: greenyellow;
+    color: purple;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    border: 2px;
+    max-width: 144px; 
+    text-align: right;
 }
