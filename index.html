@@ -13,35 +13,84 @@
     <script src="http://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js"></script> 
 </head>
 <body>
     <div class="container-fluid whole">
         <div class="well well-lg avg">
             <div>
                 <h1>Averages</h1>
-                <p>Enter any set of numbers,<br>separated by commas,<br>as such:</p>
-                <input type="text" id="avg" placeholder="1...">
-                <button>Add To Average</button>
+                <p>Enter any number</p>
+                <input type="number" id="addThis" placeholder="1...">
+                <button id="getAvg">Add To Average</button>
             </div>
-            <div>
-                <output></output>
-            </div>
+            <div id="avgOutput"></div>
         </div>
+        <script>
+
+            $('#getAvg').click(getAvg);
+            
+            $('#addThis').keyup(function(event) {
+		        if (event.keyCode === 13) {
+			        getAvg();
+		        }
+	        });
+
+            // Format well structure
+            // Store numbers in set in array
+            // Display values and index of array
+            // Clear values button
+
+        </script>
+        
+        
+        
         <div class="well well-lg sqcube">
-            <h1>Squares and Cubes</h1>
-            <p>Enter any number</p>
-            <input type="text" id="sqcube" placeholder="123...">
-            <button>Square</button>
-            <button>Cube</button>
+            <div>
+                <h1>Squares and Cubes</h1>
+                <p>Enter any number</p>
+                <input type="text" id="sqcube" placeholder="123...">
+                <button id="getSq">Square</button>
+                <button id="getCube">Cube</button>
+            </div>
+            <div id="sqOutput"></div>
+            <div id="cubeOutput"></div>
         </div>
+        <script>
+
+            $('#getSq').click(square);
+
+            $('#getCube').click(cube);
+
+            // Format well structure
+            // Label values
+            // Clear values button
+
+        </script>
+        
+        
+        
         <div class="well well-lg pythag">
-            <h1>Pythagoras</h1>
-            <p>Enter the lengths of a right triangle's sides</p>
-            <input style="width: 74px" type="text" placeholder="12...">
-            <input style="width: 74px" type="text" placeholder="23...">
-            <button>Get Hypotenuse</button>
+            <div>
+                <h1>Pythagoras</h1>
+                <p>Enter the lengths of a right triangle's sides</p>
+                <input style="width: 74px" type="text" id="sideA" placeholder="12...">
+                <input style="width: 74px" type="text" id="sideB" placeholder="23...">
+                <button id="getHypot">Get Hypotenuse</button>
+            </div>
+            <div id="hypotOutput"></div>
         </div>
+        <script>
+
+            $('#getHypot').click(hypotenuse);
+
+            // Format well structure
+            // Add triangle(?)
+            // Label values
+            // Clear values button
+
+
+        </script>
         <div class="well well-lg"></div>
         <div class="well well-lg"></div>
         <div class="well well-lg"></div>

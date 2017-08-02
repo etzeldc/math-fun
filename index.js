@@ -1,31 +1,35 @@
 // AVERAGE
 var sum = 0;
 var number = 0;
-function average(num) { //declares a function where whatever number value is entered in the placeholder will be run through the code
-    sum = sum + num; //that value is added to the running total for all values entered into the placeholder
-    number = number + 1; //if a value is passed, one is added to the count of how many values have been entered too
-    return sum / number; //returns number
+function getAvg() {
+    var addThis = Number($('#addThis').val());
+    $('#addThis').val("");
+    $('#avgOutput').empty();
+    sum = sum + addThis;
+    number = number + 1;
+    newAvg = sum / number;
+    $('#avgOutput').append(newAvg);
 }
 
-console.log(average(3));
-console.log(average(4));
-console.log(average(5));
-console.log(average(6));
-console.log(average(7));
+// SQUARE
+function square() {
+    var square = Number($('#sqcube').val()) * Number($('#sqcube').val());
+    $('#sqOutput').empty();
+    $('#sqOutput').append(square);
+}
 
-// // SQUARE
-// function square(x){
-//     return x * x;
-// }
-// $('#sqcube').
+ // CUBE
+function cube() {
+    var cube = Number($('#sqcube').val()) * Number($('#sqcube').val()) * Number($('#sqcube').val());
+    $('#cubeOutput').empty();
+    $('#cubeOutput').append(cube);
+}
 
-// // CUBE
-// function cube(x) {
-//     return x * x * x;
-// }
-// $('#sqcube').
-
-// // PYTHAGOREAN 
-// function hypotenuse(x, y) { //declares a function with two placeholders
-//     return Math.sqrt((x * x) + (y * y)); //takes the two entered values and goes all pythagorus on them
-// } //end function
+// PYTHAGOREAN 
+function hypotenuse() {
+    var sideA = Number($('#sideA').val());
+    var sideB = Number($('#sideB').val());
+    var hypot = Math.sqrt((sideA * sideA) + (sideB * sideB));
+    $('#hypotOutput').empty();
+    $('#hypotOutput').append(hypot);
+}
