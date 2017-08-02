@@ -17,30 +17,53 @@
 </head>
 <body>
     <div class="container-fluid whole">
+        <div class="well well-lg">
+            <div>
+                <h1>Sums</h1>
+                <p>Enter in any number</p>
+                <input type="text" id="addThis" placeholder="123...">
+                <button id="getSum">Sum</button>
+            </div>
+            <div id="sumOutput"></div>
+            <button id="sumClear" style="display:none">Clear</button>
+
+        </div>
+        <script>
+            $('#getSum').click(getSum);
+            $('#addThis').keyup(function(event) {
+		        if (event.keyCode === 13) {
+			        getSum();
+		        }
+	        });
+            $('#sumClear').click(sumClear);
+            // Format well structure
+            // Store values in array
+            // Display values
+        </script>
+
+
+
         <div class="well well-lg avg">
             <div>
                 <h1>Averages</h1>
                 <p>Enter any number</p>
-                <input type="number" id="addThis" placeholder="1...">
+                <input type="number" id="avgThis" placeholder="123...">
                 <button id="getAvg">Add To Average</button>
             </div>
             <div id="avgOutput"></div>
+            <button id="avgClear" style="display:none">Clear</button>
         </div>
         <script>
-
             $('#getAvg').click(getAvg);
-            
-            $('#addThis').keyup(function(event) {
+            $('#avgThis').keyup(function(event) {
 		        if (event.keyCode === 13) {
 			        getAvg();
 		        }
 	        });
-
+            $('#avgClear').click(avgClear);
             // Format well structure
             // Store numbers in set in array
             // Display values and index of array
-            // Clear values button
-
         </script>
         
         
@@ -48,24 +71,21 @@
         <div class="well well-lg sqcube">
             <div>
                 <h1>Squares and Cubes</h1>
-                <p>Enter any number</p>
+                <p>Enter any root number</p>
                 <input type="text" id="sqcube" placeholder="123...">
                 <button id="getSq">Square</button>
                 <button id="getCube">Cube</button>
             </div>
             <div id="sqOutput"></div>
             <div id="cubeOutput"></div>
+            <button id="sqCubeClear" style="display:none">Clear</button>
         </div>
         <script>
-
             $('#getSq').click(square);
-
             $('#getCube').click(cube);
-
+            $('#sqCubeClear').click(sqCubeClear);
             // Format well structure
             // Label values
-            // Clear values button
-
         </script>
         
         
@@ -74,25 +94,44 @@
             <div>
                 <h1>Pythagoras</h1>
                 <p>Enter the lengths of a right triangle's sides</p>
-                <input style="width: 74px" type="text" id="sideA" placeholder="12...">
-                <input style="width: 74px" type="text" id="sideB" placeholder="23...">
+                <input style="width: 74px" type="text" id="sideA" placeholder="Side A...">
+                <input style="width: 74px" type="text" id="sideB" placeholder="Side B...">
                 <button id="getHypot">Get Hypotenuse</button>
             </div>
             <div id="hypotOutput"></div>
+            <button id="hypotClear" style="display:none">Clear</button>
         </div>
         <script>
-
             $('#getHypot').click(hypotenuse);
-
+            $('#hypotClear').click(hypotClear);
             // Format well structure
             // Add triangle(?)
             // Label values
-            // Clear values button
-
-
         </script>
-        <div class="well well-lg"></div>
-        <div class="well well-lg"></div>
+
+
+
+        <div class="well well-lg">
+            <div>
+                <h1>Exponents</h1>
+                <p>Enter any base and power</p>
+                <input style="width: 74px" type="text" id="base" placeholder="Base...">
+                <input style="width: 74px" type="text" id="power" placeholder="Power...">
+                <button id="getProduct">Product</button>
+            </div>
+            <div id="expOutput"></div>
+            <button id="expClear" style="display:none">Clear</button>
+        </div>
+        <script>
+            $('#getProduct').click(exponent);
+            $('#expClear').click(expClear);
+            // Format well structure
+            // Superscript power input
+            // Label values
+        </script>
+
+
+
         <div class="well well-lg"></div>
     </div>
 </body>
