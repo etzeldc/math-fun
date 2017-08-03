@@ -28,9 +28,8 @@ button:hover {
     color: yellow;
 }
 
-output {
-    min-height: 200px;
-    background-color: white;
+#base, #power {
+    width: 74px;
 }
 
 .calc {

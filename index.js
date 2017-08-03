@@ -110,12 +110,11 @@ function invert() {
     $('#calcOutput').append(screen);
 }
 
-// Splice a period two before the end (toggle on/off)
-// function percent() {
-//     screen = screen + "9";
-//     $('#calcOutput').empty();
-//     $('#calcOutput').append(screen);
-// }
+function percent() {
+    screen = screen * .01;
+    $('#calcOutput').empty();
+    $('#calcOutput').append(screen);
+}
 
 function divide() {
     memory = screen;
@@ -154,11 +153,13 @@ function four() {
     $('#calcOutput').empty();
     $('#calcOutput').append(screen);
 }
+
 function five() {
     screen = screen + "5";
     $('#calcOutput').empty();
     $('#calcOutput').append(screen);
 }
+
 function six() {
     screen = screen + "6";
     $('#calcOutput').empty();
@@ -177,11 +178,13 @@ function one() {
     $('#calcOutput').empty();
     $('#calcOutput').append(screen);
 }
+
 function two() {
     screen = screen + "2";
     $('#calcOutput').empty();
     $('#calcOutput').append(screen);
 }
+
 function three() {
     screen = screen + "3";
     $('#calcOutput').empty();
@@ -201,9 +204,8 @@ function zero() {
     $('#calcOutput').append(screen);
 }
 
-// Slice the end of the string
 function backspace() {
-    screen = screen
+    screen = screen.slice(0, screen.length - 1);
     $('#calcOutput').empty();
     $('#calcOutput').append(screen);
 }
@@ -212,12 +214,13 @@ function decimal() {
     if (screen === "") {
         screen = screen + "0.";
     } else {
-    screen = screen + ".";
+        screen = screen + ".";
     }
     $('#calcOutput').empty();
     $('#calcOutput').append(screen);
 }
 
+// NEEDS WORK: multiple equals reuses memory, not screen
 function equals() {
     if (operation === "/") {
         result = Number(memory) / Number(screen);
@@ -237,3 +240,4 @@ function equals() {
 // console.log(screen);
 // console.log(memory);
 // console.log(operation);
+
